@@ -5,7 +5,7 @@ Summary(pl):	Edytor systemu plików ext2 - TYLKO DLA DO¦WIADCZONYCH U¯YTKOWNIKÓW
 Summary(tr):	ext2 dosya sistemi düzenleyicisi
 Name:		ext2ed
 Version:	0.1
-Release:	16
+Release:	17
 Copyright:	GPL
 Group:		Utilities/System
 Source:		ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{version}.tar.gz
@@ -62,10 +62,10 @@ strip ext2ed
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{%{_bindir},%{_mandir}/man8,var/state/ext2ed}
+install -d $RPM_BUILD_ROOT/{%{_bindir},%{_mandir}/man8,var/lib/ext2ed}
 
 make install \
-	VAR_DIR=$RPM_BUILD_ROOT/var/state/ext2ed \
+	VAR_DIR=$RPM_BUILD_ROOT/var/lib/ext2ed \
 	BIN_DIR=$RPM_BUILD_ROOT%{_bindir} \
 	DOC_DIR=$RPM_BUILD_ROOT \
 	MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man8
@@ -75,8 +75,8 @@ gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/* README doc/*.ps
 %files
 %defattr(644,root,root,755)
 %doc README.gz doc/*.sgml doc/*.ps.gz
-%attr(700,root,root) %dir /var/state/ext2ed
-%attr(600,root,root) %config /var/state/ext2ed/*
+%attr(700,root,root) %dir /var/lib/ext2ed
+%attr(600,root,root) %config /var/lib/ext2ed/*
 %attr(700,root,root) %{_bindir}/ext2ed
 %{_mandir}/man8/*
 

@@ -5,7 +5,7 @@ Summary(pl):	Edytor systemu plików ext2 - TYLKO DLA DO¦WIADCZONYCH U¯YTKOWNIKÓW
 Summary(tr):	ext2 dosya sistemi düzenleyicisi
 Name:		ext2ed
 Version:	0.1
-Release:	18
+Release:	22
 License:	GPL
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
@@ -34,11 +34,10 @@ Zigarette an - sagen Sie nicht, wir hätten Sie nicht gewarnt.
 
 %description -l fr
 Paquetage permettant le hackind des systèmes de fichiers ext2. Il
-n'est
-- *que* pour les hackers et doit être utilisés par des gens
-  expérimentés. Si vous n'êtes pas sûr de l'être, vous ne l'êtes pas. Ne
-  fumez pas près de ce logiciel. Vous aurez été prévenu, ce n'est pas un
-  exercice.
+n'est *que* pour les hackers et doit être utilisés par des gens
+expérimentés. Si vous n'êtes pas sûr de l'être, vous ne l'êtes pas.
+Ne fumez pas près de ce logiciel. Vous aurez été prévenu, ce n'est
+pas un exercice.
 
 %description -l pl
 Ext2ed pozwala na modyfikowanie systemu plików ext2. Przeznaczony jest

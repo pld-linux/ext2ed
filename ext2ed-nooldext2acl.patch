@@ -1,0 +1,26 @@
+--- ext2ed-0.2/ext2ed.h.orig	2001-04-05 17:55:53.000000000 +0200
++++ ext2ed-0.2/ext2ed.h	2003-12-20 21:34:19.825707280 +0100
+@@ -108,8 +108,6 @@
+ 
+ 	union union_type_data {				/* Format it in various ways */
+ 		char buffer [EXT2_MAX_BLOCK_SIZE];
+-		struct ext2_acl_header t_ext2_acl_header;
+-		struct ext2_acl_entry t_ext2_acl_entry;
+ 		struct ext2_group_desc t_ext2_group_desc;
+ 		struct ext2_inode t_ext2_inode;
+ 		struct ext2_super_block t_ext2_super_block;
+--- ext2ed-0.2/inode_com.c.orig	2001-04-05 17:55:53.000000000 +0200
++++ ext2ed-0.2/inode_com.c	2003-12-20 21:35:03.540061688 +0100
+@@ -222,12 +222,6 @@
+ 			case EXT2_ROOT_INO:
+ 				wprintw (show_win,"Root inode - ");
+ 				break;
+-			case EXT2_ACL_IDX_INO:
+-				wprintw (show_win,"ACL index inode - ");
+-				break;
+-			case EXT2_ACL_DATA_INO:
+-				wprintw (show_win,"ACL data inode - ");
+-				break;
+ 			case EXT2_BOOT_LOADER_INO:
+ 				wprintw (show_win,"Boot loader inode - ");
+ 				break;

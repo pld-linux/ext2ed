@@ -40,7 +40,7 @@ exercice.
 
 %description -l pl
 Ext2ed pozwala na modyfikowanie systemu plików ext2. Przeznaczony jest
-tylko i wy³±cznie dla do¶wiadczonych u¿ytkowników Linuxa.
+tylko i wy³±cznie dla do¶wiadczonych u¿ytkowników Linuksa.
 Niedo¶wiadczeni oraz ¶rednio-zaawansowani u¿ytkownicy nie powinni siê
 nawet zbli¿aæ do ext2ed.
 

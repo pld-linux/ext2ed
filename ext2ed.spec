@@ -73,9 +73,9 @@ gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
 %files
 %defattr(644,root,root,755)
 %doc README doc/*.sgml doc/*.ps
-%attr(700, root, root) %dir /var/lib/ext2ed
-%attr(600, root, root) %config /var/lib/ext2ed/*
-%attr(700, root, root) %{_bindir}/ext2ed
+%attr(700,root,root) %dir /var/lib/ext2ed
+%attr(600,root,root) %config /var/lib/ext2ed/*
+%attr(700,root,root) %{_bindir}/ext2ed
 %{_mandir}/man8/*
 
 %clean

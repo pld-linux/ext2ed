@@ -12,6 +12,7 @@ Source:      ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{v
 Patch:       ext2ed-0.1-config.patch
 Patch1:      ext2ed-0.1-inode.patch
 Patch2:      ext2ed-0.1-glibc.patch
+Patch3:      ext2ed-opt.patch
 Buildroot:   /tmp/%{name}-%{version}-root
 
 %description
@@ -53,6 +54,7 @@ Dosyalarýnýzý kaybedecek olursanýz, unutmayýn: sizi uyarmýþtýk!
 %patch -p0 -b .config
 %patch1 -p1 -b .inode
 %patch2 -p1 -b .glibc
+%patch3 -p1 -b .opt
 
 %build
 rm -f ext2ed
@@ -81,8 +83,11 @@ make 	VAR_DIR=$RPM_BUILD_ROOT/var/lib/ext2ed \
 rm -rf $RPM_BUILD_ROOT
 
 %changelog
-* Tue Oct 06 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
+* Mon Oct 12 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
   [0.1-15]
+- added using $PRPM_OPT_FLAGS during compile (ext2ed-opt.patch).
+
+* Tue Oct 06 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
 - added pl translation,
 - added Buildroot support,
 - restricted files permissions,

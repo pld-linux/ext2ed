@@ -80,35 +80,3 @@ gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-
-%changelog
-* Mon Dec 28 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [0.1-16]
-- added gzipping man pages.
-
-* Mon Oct 12 1998 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [0.1-15]
-- added using $PRPM_OPT_FLAGS during compile (ext2ed-opt.patch).
-
-* Tue Oct 06 1998 Wojtek ¦lusarczyk <wojtek@shadow.eu.org>
-- added pl translation,
-- added Buildroot support,
-- restricted files permissions,
-- build from non root's account,
-- major modifications of the spec file.
-
-* Fri Apr 24 1998 Prospector System <bugs@redhat.com>
-- translations modified for de, fr, tr
-
-* Wed Apr 15 1998 Erik Troan <ewt@redhat.com>
-- built against new ncurses
-- updated bad patch (!)
-
-* Tue Oct 21 1997 Donnie Barnes <djb@redhat.com>
-- various spec file clean ups
-
-* Fri Oct 10 1997 Erik Troan <ewt@redhat.com>
-- build against readline library w/ proper soname
-
-* Thu Jul 17 1997 Erik Troan <ewt@redhat.com>
-- built against glibc

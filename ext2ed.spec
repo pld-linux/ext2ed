@@ -4,16 +4,13 @@ Summary(fr):	éditeur du système de fichiers ext2, *uniquement* pour les hackers
 Summary(pl):	Edytor systemu plików ext2 - TYLKO DLA DO¦WIADCZONYCH U¯YTKOWNIKÓW
 Summary(tr):	ext2 dosya sistemi düzenleyicisi
 Name:		ext2ed
-Version:	0.1
-Release:	23
+Version:	0.2
+Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{version}.tar.gz
-Patch0:		%{name}-config.patch
-Patch1:		%{name}-inode.patch
-Patch2:		%{name}-glibc.patch
-Patch3:		%{name}-opt.patch
-Patch4:		%{name}-FHS2.0.patch
+Patch0:		%{name}-opt.patch
+Patch1:		%{name}-FHS2.0.patch
 BuildRequires:	readline-devel >= 4.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -54,15 +51,14 @@ uyarmýþtýk!
 
 %prep
 %setup -q
-%patch0 -p0
+%patch0 -p1
 %patch1 -p1
-%patch2 -p1
-%patch3 -p1
-%patch4 -p1
 
 %build
 rm -f ext2ed
-%{__make}
+%{__make} \
+	CC="%{__cc}" \
+	OPTFLAGS="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -74,14 +70,13 @@ install -d $RPM_BUILD_ROOT/{%{_bindir},%{_mandir}/man8,var/lib/ext2ed}
 	DOC_DIR=$RPM_BUILD_ROOT \
 	MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man8
 
-gzip -9nf README doc/*.ps
-
 %files
 %defattr(644,root,root,755)
-%doc README.gz doc/*.sgml doc/*.ps.gz
-%attr(700,root,root) %dir /var/lib/ext2ed
-%attr(600,root,root) %config /var/lib/ext2ed/*
-%attr(700,root,root) %{_bindir}/ext2ed
+%doc README doc/*.sgml doc/*.ps
+%attr(750,root,root) %dir /var/lib/ext2ed
+/var/lib/ext2ed/ext2.descriptors
+%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) /var/lib/ext2ed/ext2ed.conf
+%attr(744,root,root) %{_bindir}/ext2ed
 %{_mandir}/man8/*
 
 %clean

@@ -1,5 +1,5 @@
 Summary:	ext2 filesystem editor for hackers *only*
-Summary(de):	ext2-Dateisystem-Editor NUR für Hacker  
+Summary(de):	ext2-Dateisystem-Editor NUR für Hacker
 Summary(fr):	éditeur du système de fichiers ext2, *uniquement* pour les hackers
 Summary(pl):	Edytor systemu plików ext2 - TYLKO DLA DO¦WIADCZONYCH U¯YTKOWNIKÓW
 Summary(tr):	ext2 dosya sistemi düzenleyicisi
@@ -62,7 +62,7 @@ uyarmýþtýk!
 
 %build
 rm -f ext2ed
-%{__make} 
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT

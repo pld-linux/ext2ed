@@ -1,18 +1,19 @@
-Summary:     ext2 filesystem editor for hackers *only*
-Summary(de): ext2-Dateisystem-Editor NUR für Hacker  
-Summary(fr): éditeur du système de fichiers ext2, *uniquement* pour les hackers
-Summary(pl): Edytor systemu plików ext2 - TYLKO DLA DO¦WIADCZONYCH U¯YTKOWNIKÓW
-Summary(tr): ext2 dosya sistemi düzenleyicisi
-Name:        ext2ed
-Version:     0.1
-Release:     16
-Copyright:   GPL
-Group:       Utilities/System
-Source:      ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{version}.tar.gz
-Patch:       ext2ed-config.patch
-Patch1:      ext2ed-inode.patch
-Patch2:      ext2ed-glibc.patch
-Patch3:      ext2ed-opt.patch
+Summary:	ext2 filesystem editor for hackers *only*
+Summary(de):	ext2-Dateisystem-Editor NUR für Hacker  
+Summary(fr):	éditeur du système de fichiers ext2, *uniquement* pour les hackers
+Summary(pl):	Edytor systemu plików ext2 - TYLKO DLA DO¦WIADCZONYCH U¯YTKOWNIKÓW
+Summary(tr):	ext2 dosya sistemi düzenleyicisi
+Name:		ext2ed
+Version:	0.1
+Release:	16
+Copyright:	GPL
+Group:		Utilities/System
+Source:		ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{version}.tar.gz
+Patch:		ext2ed-config.patch
+Patch1:		ext2ed-inode.patch
+Patch2:		ext2ed-glibc.patch
+Patch3:		ext2ed-opt.patch
+Patch4:		ext2ed-FHS2.0.patch
 BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
@@ -52,6 +53,7 @@ kaybedecek olursanýz, unutmayýn: sizi uyarmýþtýk!
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p1
 
 %build
 rm -f ext2ed
@@ -60,21 +62,21 @@ strip ext2ed
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{usr/{bin,man/man8},var/lib/ext2ed}
+install -d $RPM_BUILD_ROOT/{%{_bindir},%{_mandir}/man8,var/state/ext2ed}
 
 make install \
-	VAR_DIR=$RPM_BUILD_ROOT/var/lib/ext2ed \
+	VAR_DIR=$RPM_BUILD_ROOT/var/state/ext2ed \
 	BIN_DIR=$RPM_BUILD_ROOT%{_bindir} \
 	DOC_DIR=$RPM_BUILD_ROOT \
 	MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man8
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/* README doc/*.ps
 
 %files
 %defattr(644,root,root,755)
-%doc README doc/*.sgml doc/*.ps
-%attr(700,root,root) %dir /var/lib/ext2ed
-%attr(600,root,root) %config /var/lib/ext2ed/*
+%doc README.gz doc/*.sgml doc/*.ps.gz
+%attr(700,root,root) %dir /var/state/ext2ed
+%attr(600,root,root) %config /var/state/ext2ed/*
 %attr(700,root,root) %{_bindir}/ext2ed
 %{_mandir}/man8/*
 

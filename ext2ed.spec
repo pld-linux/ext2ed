@@ -66,9 +66,9 @@ make install \
 	VAR_DIR=$RPM_BUILD_ROOT/var/lib/ext2ed \
 	BIN_DIR=$RPM_BUILD_ROOT/usr/bin \
 	DOC_DIR=$RPM_BUILD_ROOT \
-	MAN_DIR=$RPM_BUILD_ROOT/usr/man/man8
+	MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man8
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man8/*
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
 
 %files
 %defattr(644,root,root,755)
@@ -76,7 +76,7 @@ gzip -9nf $RPM_BUILD_ROOT/usr/man/man8/*
 %attr(700, root, root) %dir /var/lib/ext2ed
 %attr(600, root, root) %config /var/lib/ext2ed/*
 %attr(700, root, root) /usr/bin/ext2ed
-%attr(644, root,  man) /usr/man/man8/*
+%attr(644, root,  man) %{_mandir}/man8/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT

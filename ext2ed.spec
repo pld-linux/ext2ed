@@ -5,7 +5,7 @@ Summary(pl):	Edytor systemu plików ext2 - TYLKO DLA DO¦WIADCZONYCH U¯YTKOWNIKÓW
 Summary(tr):	ext2 dosya sistemi düzenleyicisi
 Name:		ext2ed
 Version:	0.1
-Release:	17
+Release:	18
 License:	GPL
 Group:		Utilities/System
 Group(pl):	Narzêdzia/System
@@ -15,6 +15,7 @@ Patch1:		ext2ed-inode.patch
 Patch2:		ext2ed-glibc.patch
 Patch3:		ext2ed-opt.patch
 Patch4:		ext2ed-FHS2.0.patch
+BuildRequires:	readline-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

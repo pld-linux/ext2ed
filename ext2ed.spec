@@ -9,6 +9,7 @@ Release:	1
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{version}.tar.gz
+# Source0-md5:	996bbbecceee1eb95e4cdbc53a1860df
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-FHS2.0.patch
 BuildRequires:	readline-devel >= 4.2

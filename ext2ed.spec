@@ -5,17 +5,18 @@ Summary(pl):	Edytor systemu plików ext2 - TYLKO DLA DO¦WIADCZONYCH U¯YTKOWNIKÓW
 Summary(tr):	ext2 dosya sistemi düzenleyicisi
 Name:		ext2ed
 Version:	0.1
-Release:	22
+Release:	23
 License:	GPL
-Group:		Utilities/System
-Group(pl):	Narzêdzia/System
+Group:		Applications/System
+Group(de):	Applikationen/System
+Group(pl):	Aplikacje/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{version}.tar.gz
-Patch0:		ext2ed-config.patch
-Patch1:		ext2ed-inode.patch
-Patch2:		ext2ed-glibc.patch
-Patch3:		ext2ed-opt.patch
-Patch4:		ext2ed-FHS2.0.patch
-BuildRequires:	readline-devel
+Patch0:		%{name}-config.patch
+Patch1:		%{name}-inode.patch
+Patch2:		%{name}-glibc.patch
+Patch3:		%{name}-opt.patch
+Patch4:		%{name}-FHS2.0.patch
+BuildRequires:	readline-devel >= 4.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,9 +36,9 @@ Zigarette an - sagen Sie nicht, wir hätten Sie nicht gewarnt.
 %description -l fr
 Paquetage permettant le hackind des systèmes de fichiers ext2. Il
 n'est *que* pour les hackers et doit être utilisés par des gens
-expérimentés. Si vous n'êtes pas sûr de l'être, vous ne l'êtes pas.
-Ne fumez pas près de ce logiciel. Vous aurez été prévenu, ce n'est
-pas un exercice.
+expérimentés. Si vous n'êtes pas sûr de l'être, vous ne l'êtes pas. Ne
+fumez pas près de ce logiciel. Vous aurez été prévenu, ce n'est pas un
+exercice.
 
 %description -l pl
 Ext2ed pozwala na modyfikowanie systemu plików ext2. Przeznaczony jest
@@ -64,7 +65,6 @@ uyarmýþtýk!
 %build
 rm -f ext2ed
 %{__make} 
-strip ext2ed
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -76,7 +76,7 @@ install -d $RPM_BUILD_ROOT/{%{_bindir},%{_mandir}/man8,var/lib/ext2ed}
 	DOC_DIR=$RPM_BUILD_ROOT \
 	MAN_DIR=$RPM_BUILD_ROOT%{_mandir}/man8
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/* README doc/*.ps
+gzip -9nf README doc/*.ps
 
 %files
 %defattr(644,root,root,755)

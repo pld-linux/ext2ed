@@ -1,0 +1,12 @@
+diff -Nru ext2ed-0.1/Makefile ext2ed-0.1.new/Makefile
+--- ext2ed-0.1/Makefile	Mon Oct 12 10:14:44 1998
++++ ext2ed-0.1.new/Makefile	Mon Oct 12 10:16:06 1998
+@@ -46,7 +46,7 @@
+ # ------------------------------------------------------------------------
+ 
+ CC		=	gcc
+-CCFLAGS		=	-O $(FLAGS) -DVAR_DIR=\"$(VAR_DIR)\" $(NCURSES_INCLUDE) $(READLINE_INCLUDE)
++CCFLAGS		=	$(RPM_OPT_FLAGS) $(FLAGS) -DVAR_DIR=\"$(VAR_DIR)\" $(NCURSES_INCLUDE) $(READLINE_INCLUDE)
+ LINKFLAGS	=	$(NCURSES_LIB) $(READLINE_LIB)
+ LIBS		=	-lreadline -lncurses
+ 

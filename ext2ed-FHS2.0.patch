@@ -1,0 +1,16 @@
+diff -ur ext2ed.orig/Makefile ext2ed-0.1/Makefile
+--- ext2ed.orig/Makefile	Sun Jul 18 02:57:24 1999
++++ ext2ed-0.1/Makefile	Sun Jul 18 02:57:57 1999
+@@ -39,9 +39,9 @@
+ # The EXT2ED documentation will go into DOC_DIR.
+ 
+ BIN_DIR		=	/usr/bin
+-VAR_DIR		=	/var/lib/ext2ed
+-MAN_DIR		=	/usr/man/man8
+-DOC_DIR		=	/usr/doc/ext2ed
++VAR_DIR		=	/var/state/ext2ed
++MAN_DIR		=	/usr/share/man/man8
++DOC_DIR		=	/usr/share/doc/ext2ed
+ 
+ # ------------------------------------------------------------------------
+ 

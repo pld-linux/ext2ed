@@ -13,7 +13,7 @@ Patch:       ext2ed-config.patch
 Patch1:      ext2ed-inode.patch
 Patch2:      ext2ed-glibc.patch
 Patch3:      ext2ed-opt.patch
-Buildroot:   /tmp/%{name}-%{version}-root
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 This is a package to allow for hacking of your extended two file systems. It

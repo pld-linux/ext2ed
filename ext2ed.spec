@@ -12,7 +12,12 @@ Source0:	ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{versi
 # Source0-md5:	996bbbecceee1eb95e4cdbc53a1860df
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-FHS2.0.patch
+Patch2:		%{name}-nooldext2acl.patch
 BuildRequires:	readline-devel >= 4.2
+# according to comments in e2fsprogs, ext2ed code assumes that CPU
+# is 32-bit little endian - on other platforms it can only break something
+# (another thing is that it doesn't support >2GB filesystems at all)
+ExclusiveArch:	%{ix86}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -54,6 +59,7 @@ uyarmýþtýk!
 %setup -q
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 rm -f ext2ed

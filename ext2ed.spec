@@ -63,7 +63,7 @@ rm -f ext2ed
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT/{%{_bindir},%{_mandir}/man8,var/lib/ext2ed}
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8,/var/lib/ext2ed}
 
 %{__make} install \
 	VAR_DIR=$RPM_BUILD_ROOT/var/lib/ext2ed \

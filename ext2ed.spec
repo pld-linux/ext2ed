@@ -76,7 +76,7 @@ gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man8/*
 %attr(700, root, root) %dir /var/lib/ext2ed
 %attr(600, root, root) %config /var/lib/ext2ed/*
 %attr(700, root, root) /usr/bin/ext2ed
-%attr(644, root,  man) %{_mandir}/man8/*
+%{_mandir}/man8/*
 
 %clean
 rm -rf $RPM_BUILD_ROOT

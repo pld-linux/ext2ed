@@ -82,7 +82,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8,/var/lib/ext2ed}
 %doc README doc/*.sgml doc/*.ps
 %attr(750,root,root) %dir /var/lib/ext2ed
 /var/lib/ext2ed/ext2.descriptors
-%attr(640,root,root) %config(noreplace) %verify(not size mtime md5) /var/lib/ext2ed/ext2ed.conf
+%attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) /var/lib/ext2ed/ext2ed.conf
 %attr(744,root,root) %{_bindir}/ext2ed
 %{_mandir}/man8/*
 

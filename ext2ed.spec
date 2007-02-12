@@ -1,8 +1,8 @@
 Summary:	ext2 filesystem editor for hackers *only*
-Summary(de.UTF-8):   ext2-Dateisystem-Editor NUR für Hacker
-Summary(fr.UTF-8):   éditeur du système de fichiers ext2, *uniquement* pour les hackers
-Summary(pl.UTF-8):   Edytor systemu plików ext2 - TYLKO DLA DOŚWIADCZONYCH UŻYTKOWNIKÓW
-Summary(tr.UTF-8):   ext2 dosya sistemi düzenleyicisi
+Summary(de.UTF-8):	ext2-Dateisystem-Editor NUR für Hacker
+Summary(fr.UTF-8):	éditeur du système de fichiers ext2, *uniquement* pour les hackers
+Summary(pl.UTF-8):	Edytor systemu plików ext2 - TYLKO DLA DOŚWIADCZONYCH UŻYTKOWNIKÓW
+Summary(tr.UTF-8):	ext2 dosya sistemi düzenleyicisi
 Name:		ext2ed
 Version:	0.2
 Release:	1

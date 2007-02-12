@@ -1,8 +1,8 @@
 Summary:	ext2 filesystem editor for hackers *only*
-Summary(de):	ext2-Dateisystem-Editor NUR für Hacker
-Summary(fr):	éditeur du système de fichiers ext2, *uniquement* pour les hackers
-Summary(pl):	Edytor systemu plików ext2 - TYLKO DLA DO¦WIADCZONYCH U¯YTKOWNIKÓW
-Summary(tr):	ext2 dosya sistemi düzenleyicisi
+Summary(de.UTF-8):   ext2-Dateisystem-Editor NUR fÃ¼r Hacker
+Summary(fr.UTF-8):   Ã©diteur du systÃ¨me de fichiers ext2, *uniquement* pour les hackers
+Summary(pl.UTF-8):   Edytor systemu plikÃ³w ext2 - TYLKO DLA DOÅšWIADCZONYCH UÅ»YTKOWNIKÃ“W
+Summary(tr.UTF-8):   ext2 dosya sistemi dÃ¼zenleyicisi
 Name:		ext2ed
 Version:	0.2
 Release:	1
@@ -27,33 +27,33 @@ experienced personnel. If you aren't sure if this is you, it isn't.
 Also, do not smoke near this software. You have been warned. This is
 not a recording.
 
-%description -l de
+%description -l de.UTF-8
 Dies ist ein Paket zum Hacken der ext2-Dateisysteme, zum
 AUSSCHLIESSLICHEN Gebrauch durch Hacker und versierte Fachleute. Wenn
-Sie sich nicht angesprochen fühlen, lassen Sie lieber die Hände davon!
-Und noch etwas: Zünden Sie sich in der Nähe dieser Software keine
-Zigarette an - sagen Sie nicht, wir hätten Sie nicht gewarnt.
+Sie sich nicht angesprochen fÃ¼hlen, lassen Sie lieber die HÃ¤nde davon!
+Und noch etwas: ZÃ¼nden Sie sich in der NÃ¤he dieser Software keine
+Zigarette an - sagen Sie nicht, wir hÃ¤tten Sie nicht gewarnt.
 
-%description -l fr
-Paquetage permettant le hackind des systèmes de fichiers ext2. Il
-n'est *que* pour les hackers et doit être utilisés par des gens
-expérimentés. Si vous n'êtes pas sûr de l'être, vous ne l'êtes pas. Ne
-fumez pas près de ce logiciel. Vous aurez été prévenu, ce n'est pas un
+%description -l fr.UTF-8
+Paquetage permettant le hackind des systÃ¨mes de fichiers ext2. Il
+n'est *que* pour les hackers et doit Ãªtre utilisÃ©s par des gens
+expÃ©rimentÃ©s. Si vous n'Ãªtes pas sÃ»r de l'Ãªtre, vous ne l'Ãªtes pas. Ne
+fumez pas prÃ¨s de ce logiciel. Vous aurez Ã©tÃ© prÃ©venu, ce n'est pas un
 exercice.
 
-%description -l pl
-Ext2ed pozwala na modyfikowanie systemu plików ext2. Przeznaczony jest
-tylko i wy³±cznie dla do¶wiadczonych u¿ytkowników Linuksa.
-Niedo¶wiadczeni oraz ¶rednio-zaawansowani u¿ytkownicy nie powinni siê
-nawet zbli¿aæ do ext2ed.
+%description -l pl.UTF-8
+Ext2ed pozwala na modyfikowanie systemu plikÃ³w ext2. Przeznaczony jest
+tylko i wyÅ‚Ä…cznie dla doÅ›wiadczonych uÅ¼ytkownikÃ³w Linuksa.
+NiedoÅ›wiadczeni oraz Å›rednio-zaawansowani uÅ¼ytkownicy nie powinni siÄ™
+nawet zbliÅ¼aÄ‡ do ext2ed.
 
-W pobli¿u ext2ed obowi±zuje ca³kowity zakaz palenia tytoniu ;)
+W pobliÅ¼u ext2ed obowiÄ…zuje caÅ‚kowity zakaz palenia tytoniu ;)
 
-%description -l tr
-Bu yazılımlarla ext2 dosya sistemi üzerinde değişiklikler
-yapabilirsiniz. Bu yazılımı sadece ne yaptığınızdan kesinkle eminseniz
-kullanın. Dosyalarınızı kaybedecek olursanız, unutmayın: sizi
-uyarmıştık!
+%description -l tr.UTF-8
+Bu yazÄ±lÄ±mlarla ext2 dosya sistemi Ã¼zerinde deÄŸiÅŸiklikler
+yapabilirsiniz. Bu yazÄ±lÄ±mÄ± sadece ne yaptÄ±ÄŸÄ±nÄ±zdan kesinkle eminseniz
+kullanÄ±n. DosyalarÄ±nÄ±zÄ± kaybedecek olursanÄ±z, unutmayÄ±n: sizi
+uyarmÄ±ÅŸtÄ±k!
 
 %prep
 %setup -q

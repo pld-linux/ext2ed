@@ -13,6 +13,8 @@ Source0:	ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{versi
 Patch0:		%{name}-opt.patch
 Patch1:		%{name}-FHS2.0.patch
 Patch2:		%{name}-nooldext2acl.patch
+Patch3:		%{name}-header.patch
+BuildRequires:	e2fsprogs-devel
 BuildRequires:	readline-devel >= 4.2
 # according to comments in e2fsprogs, ext2ed code assumes that CPU
 # is 32-bit little endian - on other platforms it can only break something
@@ -60,6 +62,7 @@ uyarmıştık!
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 %build
 rm -f ext2ed

@@ -1,0 +1,11 @@
+--- ext2ed-0.2/ext2ed.h~	2008-03-14 10:59:15.937117549 +0100
++++ ext2ed-0.2/ext2ed.h	2008-03-14 10:59:54.060445585 +0100
+@@ -34,7 +34,7 @@
+ 
+ #define DEBUG						/* Activate self-sanity checks */
+ 
+-#include <linux/ext2_fs.h>				/* Main kernel ext2 include file */
++#include <ext2fs/ext2_fs.h>				/* Main ext2 include file */
+ #include <sys/stat.h>
+ 
+ #ifdef OLD_NCURSES					/* The ncurses interface */

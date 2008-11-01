@@ -5,7 +5,7 @@ Summary(pl.UTF-8):	Edytor systemu plików ext2 - TYLKO DLA DOŚWIADCZONYCH UŻYT
 Summary(tr.UTF-8):	ext2 dosya sistemi düzenleyicisi
 Name:		ext2ed
 Version:	0.2
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{version}.tar.gz
@@ -14,6 +14,7 @@ Patch0:		%{name}-opt.patch
 Patch1:		%{name}-FHS2.0.patch
 Patch2:		%{name}-nooldext2acl.patch
 Patch3:		%{name}-header.patch
+Patch4:		%{name}-build.patch
 BuildRequires:	e2fsprogs-devel
 BuildRequires:	readline-devel >= 4.2
 # according to comments in e2fsprogs, ext2ed code assumes that CPU
@@ -63,6 +64,7 @@ uyarmıştık!
 %patch1 -p1
 %patch2 -p1
 %patch3 -p1
+%patch4 -p0
 
 %build
 rm -f ext2ed

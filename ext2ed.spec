@@ -5,7 +5,7 @@ Summary(pl.UTF-8):	Edytor systemu plików ext2 - TYLKO DLA DOŚWIADCZONYCH UŻYT
 Summary(tr.UTF-8):	ext2 dosya sistemi düzenleyicisi
 Name:		ext2ed
 Version:	0.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/System
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/filesystems/ext2/%{name}-%{version}.tar.gz
@@ -89,7 +89,7 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man8,/var/lib/ext2ed}
 /var/lib/ext2ed/ext2.descriptors
 %attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) /var/lib/ext2ed/ext2ed.conf
 %attr(744,root,root) %{_bindir}/ext2ed
-%{_mandir}/man8/*
+%{_mandir}/man8/*.8*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
